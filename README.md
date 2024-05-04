@@ -77,5 +77,6 @@
    2. npm install axios (← JSでAPIと通信するためのライブラリ)
    3. 型定義の作成（例：types/Todo.ts） 
    4. コンポーネントの作成（例：components/Todo.tsx）
-      - [useState](https://react.dev/reference/react/useState): 変数のstateを追加 with 初期値
-      - [useEffect](https://react.dev/reference/react/useEffect): コンポーネントがページに追加された時（＝マウントされた時）に実行される関数を定義  
+      - [useState](https://react.dev/reference/react/useState): 変数のstateを追加 with 初期値。戻り値のset functionは、stateを更新しre-renderを発火させる。
+      - [useEffect](https://react.dev/reference/react/useEffect): コンポーネントがページに追加された時（＝マウントされた時）に実行される関数を定義。dependenciesに定義した変数が変わっていたら関数は実行される。
+      - 動的ルーティング：`page/todos/[id]/index.tsx`のように、動的に変更されるURLの一部を[]で囲んでディレクトリ構成を作るとその通りにルーティングにも反映される
