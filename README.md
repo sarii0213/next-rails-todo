@@ -68,3 +68,14 @@
 16. gitの調整
     1. backendディレクトリの.gitを削除
     2. backendディレクトリの.gitignoreをルートに移動（ファイルのパス修正）
+
+### Next.jsとRailsの繋ぎ込み
+1. RailsでAPIを実装
+   1. model, controller, seed, routingを作成
+2. Next.jsでUIを実装
+   1. トップページ作成（pages/index.js）
+   2. npm install axios (← JSでAPIと通信するためのライブラリ)
+   3. 型定義の作成（例：types/Todo.ts） 
+   4. コンポーネントの作成（例：components/Todo.tsx）
+      - [useState](https://react.dev/reference/react/useState): 変数のstateを追加 with 初期値
+      - [useEffect](https://react.dev/reference/react/useEffect): コンポーネントがページに追加された時（＝マウントされた時）に実行される関数を定義  
