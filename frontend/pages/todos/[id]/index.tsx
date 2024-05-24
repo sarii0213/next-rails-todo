@@ -9,14 +9,14 @@ const TodoDetail = () => {
     const router = useRouter();
     const { id } = router.query;
 
-    const [todo, setTodo] = useState(null);
+    const [todo, setTodo] = useState<TodoType | null>(null);
 
     useEffect(() => {
         const fetchTodo = async  () => {
             try {
                 const res = await axios.get(`http://localhost:3000/todos/${id}`);
                 setTodo(res.data);
-            } catch(err) {
+            } catch (err) {
                 console.log(err);
             }
         };
